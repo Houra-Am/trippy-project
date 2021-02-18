@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import HotelCard from "../components/HotelCard";
+import HotelDescriptionCard from "../components/HotelDescriptionCard";
 
 class HotelPage extends React.Component {
   constructor(props) {
@@ -35,7 +37,13 @@ class HotelPage extends React.Component {
             <h2 className='text-center'>Loading, please wait!</h2>
           ) : (
             <div>
-              <h4>{this.state.hotelDescription.email}</h4>
+              <HotelDescriptionCard
+                image={this.state.hotelDescription.pictures}
+                commodities={this.state.hotelDescription.commodities}
+                address={this.state.hotelDescription.address}
+              />
+
+              <p></p>
             </div>
           )}
         </div>
