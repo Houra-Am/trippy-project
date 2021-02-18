@@ -23,7 +23,7 @@ class Hotels extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="all-pages">
         <h1>Hotels</h1>
       </div>
     );

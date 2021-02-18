@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Myrlissa";
+    src: url('http://localhost:3000/fonts/Myrlissa.otf')
+   }
+.App
+{
+    font-family: 'Montserrat';
+}
+
+:root {
+    --navbar-background : #00a64a;
+    --general-background : #cccccc;
+    --navbar-size : 50px;
+}
+
+.all-pages{
+    color: #2a2a2a;
+    /*background-color : var(--general-background);*/
+    background-image:url(./image/trip_140fecf813196305.jpg);
+    background-size:cover;
+    
+    
+}
+
+.navbar
+{
+    font-family: 'Myrlissa';
+    background-color: var(--navbar-background);
+    size: var(--navbar-size);
+}
+.navbar-brand{
+    font-size: 3.25rem !important;
+}
+.nav-link{
+    font-size: 1.8rem !important;
+}
+
+.card-title
+{
+    color:orangered
+}

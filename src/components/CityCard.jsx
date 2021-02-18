@@ -2,10 +2,9 @@ import React from "react";
 
 class CityCard extends React.Component {
   render() {
+
     return (
       <div
-        className='cityCard mb-3'
-        style={{ width: "18rem" }}
         onClick={this.props.click}>
         <img src={this.props.image} className='card-img-top' alt='' />
         <div className='card-body'>

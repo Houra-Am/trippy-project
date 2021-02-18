@@ -13,7 +13,7 @@ class HotelPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="all-pages">
         <h1>Hotel Page </h1>
       </div>
     );

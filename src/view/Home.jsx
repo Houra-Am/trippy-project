@@ -24,14 +24,28 @@ class Home extends React.Component {
   }
 
   render() {
+    
     return (
-      <div className='container d-flex flex-column justify-content-center'>
+      <div className='container-fluid d-flex flex-column justify-content-center all-pages'>
         <h1 className='text-center tabTitle'>Découvrir le monde</h1>
         <div className='row'>
           {this.state.cities.length > 0 &&
             this.state.cities.map((city) => {
+              if(city.name === "Paris"){
+                return (
+                <div className='cityCard col-sm-12 col-md-6 justify-content-center'>
+                <Link>
+                  <CityCard
+                    cities={city.name}
+                    image={this.state.img + city.source}
+                    alt={`${city.name}`}
+                  />
+                </Link>
+              </div>
+              )
+              }else{
               return (
-                <div className='cityCard col-6 justify-content-center'>
+                <div className='cityCard col-sm-6 col-md-3 justify-content-center'>
                   <Link>
                     <CityCard
                       cities={city.name}
@@ -40,7 +54,7 @@ class Home extends React.Component {
                     />
                   </Link>
                 </div>
-              );
+              );}
             })}
         </div>
         {this.state.cities.length === 0 && (
@@ -48,6 +62,7 @@ class Home extends React.Component {
         )}
       </div>
     );
+    
   }
 }
 
