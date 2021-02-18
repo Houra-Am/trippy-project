@@ -36,15 +36,18 @@ class Hotels extends React.Component {
         <h1 className='text-center tabTitle'>City details</h1>
         {this.state.hotelDetails.length > 0 &&
           this.state.hotelDetails.map((hotel) => {
+            console.log(hotel);
             return (
-              <HotelCard
-                name={hotel.name}
-                image={hotel.pictures[0]}
-                //image={"http://via.placeholder.com/300x200"}
-                alt={`${hotel.name}`}
-                price={hotel.price}
-                stars={hotel.stars}
-              />
+              <Link to={`/hotel/${hotel._id}`}>
+                <HotelCard
+                  name={hotel.name}
+                  image={hotel.pictures[0]}
+                  //image={"http://via.placeholder.com/300x200"}
+                  alt={`${hotel.name}`}
+                  price={hotel.price}
+                  stars={hotel.stars}
+                />
+              </Link>
             );
           })}
       </div>
