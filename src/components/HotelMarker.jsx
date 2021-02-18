@@ -19,9 +19,6 @@ class HotelMaker extends React.Component {
         <div>
           <h1>HotelMaker</h1>
   
-          
-              
-        
         </div>
           
       

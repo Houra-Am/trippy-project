@@ -1,4 +1,5 @@
 import React from "react";
+import HotelMap from "./../components/HotelMap";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
 class Hotels extends React.Component {
@@ -6,6 +7,10 @@ class Hotels extends React.Component {
     super(props);
     this.state = {
       cities: [],
+      center:{
+        lat:0,
+        lon:0
+      }
     };
   }
 
@@ -22,6 +27,7 @@ class Hotels extends React.Component {
         console.log("commodities", commodities);
         this.setState({
           cities: commodities.results,
+          center:commodities.center,
         });
       })
       .catch((error) => console.error(error));
@@ -31,6 +37,7 @@ class Hotels extends React.Component {
     return (
       <div>
         <h1>Hotels</h1>
+         <HotelMap  center={this.state.center} hotel={this.state.cities}/>
       </div>
     );
   }
