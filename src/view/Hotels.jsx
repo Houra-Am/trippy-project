@@ -27,7 +27,7 @@ class Hotels extends React.Component {
     )
       .then((response) => response.json())
       .then((results) => {
-        console.log("results", results);
+        console.log("results", results.results);
         this.setState({
           hotelDetails: results.results,
           center: results.center
@@ -37,35 +37,50 @@ class Hotels extends React.Component {
   }
 
   render() {
+
     return (
-      <div className='container d-flex flex-column justify-content-center'>
-        <div>
-          <HotelMap center={this.state.center} hotel={this.state.hotelDetails} />
-        </div>
+
+      <div className='container row d-flex flex-column justify-content-center'>
+
+        
 
         <h1 className='text-center tabTitle'>City details</h1>
+        <div className="col-6">
+          {this.state.hotelDetails.length > 0 &&
+            this.state.hotelDetails.map((hotel) => {
+              console.log(hotel);
+              return (
 
-        {this.state.hotelDetails.length > 0 &&
-          this.state.hotelDetails.map((hotel) => {
-            console.log(hotel);                                                                                                                                                                                                                                                                             
-            return (
+                <div>
 
-              <Link to={`/hotel/${hotel._id}`}>
-                <HotelCard
-                  name={hotel.name}
-                  image={hotel.pictures[0]}
-                  //image={"http://via.placeholder.com/300x200"}
-                  alt={`${hotel.name}`}
-                  price={hotel.price}
-                  stars={hotel.stars}
-
-                />
-              </Link>
-
-            );
+                  <Link to={`/hotel/${hotel._id}`}>
+                    <HotelCard
+                      name={hotel.name}
+                      image={hotel.pictures[0]}
+                      //image={"http://via.placeholder.com/300x200"}
+                      alt={`${hotel.name}`}
+                      stars={hotel.stars}
+                      price={hotel.price}
 
 
-          })}
+                    />
+                  </Link>
+                  { console.log("prix=", hotel.price)}
+                </div>
+
+
+
+              );
+
+
+            })}
+        </div>
+        <div className="col-6">
+        <HotelMap center={this.state.center} hotel={this.state.hotelDetails}  />
+        </div>
+
+
+
       </div>
 
     );

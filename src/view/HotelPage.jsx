@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import HotelDescriptionCard from "../components/HotelDescriptionCard";
 import ImageGallery from "react-image-gallery";
+import HotelMap from "../components/HotelMap"
 
 class HotelPage extends React.Component {
   constructor(props) {
@@ -70,6 +71,7 @@ class HotelPage extends React.Component {
 
               <p></p>
             </div>
+
           )}
         </div>
       </div>
