@@ -17,8 +17,7 @@ class HotelMaker extends React.Component {
     render() {
       return (
         <div>
-          <h1>HotelMaker</h1>
-  
+          {this.props.price}
         </div>
           
       

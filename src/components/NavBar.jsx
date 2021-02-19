@@ -42,8 +42,17 @@ class NavBar extends React.Component {
                 </li>
                 <li className='nav-item'>
                   <Link className='nav-link' to='/HotelPage'>
-                    Hotel Page
+                    Restaurants
                   </Link>
+                </li>
+                <li className='nav-item'>
+                  <Link className='nav-link' to='/HotelPage'>
+                    Login
+                  </Link>
+                </li>
+                <li className='nav-item'>
+                  <Link className='nav-link' to='/HotelPage'>
+                    Signup                  </Link>
                 </li>
               </ul>
             </div>
@@ -51,9 +60,7 @@ class NavBar extends React.Component {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/hotels/:city' component={Hotels} />
-            <Route path='/hotels' component={Hotels} />
-            <Route path='/hotels/:id' component={HotelPage} />
-            <Route path='/hotelPage' component={HotelPage} />
+            <Route path='/hotel/:id' component={HotelPage} />
             <Route path='*' component={Error404} />
           </Switch>
         </div>
