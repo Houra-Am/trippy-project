@@ -6,7 +6,7 @@ class HotelMap extends React.Component {
   constructor() {
     super();
     this.state = {
-      nimportequoi: [],
+      nimportequoi: ["HOURRRRRRAAAAA"],
     };
   }
 
