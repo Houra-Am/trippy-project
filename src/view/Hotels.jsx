@@ -40,44 +40,50 @@ class Hotels extends React.Component {
 
     return (
 
-      <div className='container row d-flex flex-column justify-content-center'>
-
-        
-
+      <div className='container-fluid d-flex flex-column justify-content-center'>
         <h1 className='text-center tabTitle'>City details</h1>
-        <div className="col-6">
-          {this.state.hotelDetails.length > 0 &&
-            this.state.hotelDetails.map((hotel) => {
-              console.log(hotel);
-              return (
+        <div className="col">
+          <div className="row">
+            <div className="col-6">
+              {this.state.hotelDetails.length > 0 &&
+                this.state.hotelDetails.map((hotel) => {
+                  console.log(hotel);
+                  return (
 
-                <div>
+                    <div>
 
-                  <Link to={`/hotel/${hotel._id}`}>
-                    <HotelCard
-                      name={hotel.name}
-                      image={hotel.pictures[0]}
-                      //image={"http://via.placeholder.com/300x200"}
-                      alt={`${hotel.name}`}
-                      stars={hotel.stars}
-                      price={hotel.price}
-
-
-                    />
-                  </Link>
-                  { console.log("prix=", hotel.price)}
-                </div>
+                      <Link to={`/hotel/${hotel._id}`}>
+                        <HotelCard
+                          name={hotel.name}
+                          image={hotel.pictures[0]}
+                          //image={"http://via.placeholder.com/300x200"}
+                          alt={`${hotel.name}`}
+                          stars={hotel.stars}
+                          price={hotel.price}
 
 
+                        />
+                      </Link>
+                      { console.log("prix=", hotel.price)}
+                    </div>
 
-              );
 
 
-            })}
+                  );
+
+
+                })}
+            </div>
+               <div className="col-6">
+            <HotelMap center={this.state.center} hotel={this.state.hotelDetails} />
+          </div>
+          </div>
+
+       
         </div>
-        <div className="col-6">
-        <HotelMap center={this.state.center} hotel={this.state.hotelDetails}  />
-        </div>
+
+
+
 
 
 

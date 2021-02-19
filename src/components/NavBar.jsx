@@ -42,8 +42,17 @@ class NavBar extends React.Component {
                 </li>
                 <li className='nav-item'>
                   <Link className='nav-link' to='/HotelPage'>
-                    Hotel Page
+                    Restaurants
                   </Link>
+                </li>
+                <li className='nav-item'>
+                  <Link className='nav-link' to='/HotelPage'>
+                    Login
+                  </Link>
+                </li>
+                <li className='nav-item'>
+                  <Link className='nav-link' to='/HotelPage'>
+                    Signup                  </Link>
                 </li>
               </ul>
             </div>
