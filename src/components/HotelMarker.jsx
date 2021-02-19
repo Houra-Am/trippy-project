@@ -17,7 +17,7 @@ class HotelMaker extends React.Component {
     render() {
       return (
         <div>
-          <h1>HotelMaker</h1>
+          <h1>HotelMarker</h1>
   
         </div>
           

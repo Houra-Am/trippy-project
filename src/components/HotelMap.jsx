@@ -29,7 +29,7 @@ class HotelMap extends React.Component {
     console.log(this.props.center)
     return (
       <div id="mapid">
-        <h1>HotelMap  </h1>
+        
         <Map
           style={{ width: 800, height: 400 }}
           center={[this.props.center.lat, this.props.center.lon]} zoom={13} scrollWheelZoom={false}>

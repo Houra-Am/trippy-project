@@ -6,7 +6,7 @@ class HotelCard extends React.Component {
   render() {
     return (
       <div>
-        <h1>HotelCard</h1>
+        
         <div
           className='cityCard mb-3'
           style={{ width: "18rem" }}
