@@ -16,10 +16,8 @@
 .all-pages{
     color: #2a2a2a;
     /*background-color : var(--general-background);*/
-    background-image:url(./image/trip_140fecf813196305.jpg);
-    background-size:cover;
-    
-    
+    background-image:url(./image/sante-voyage-mains-monde-ciel.jpg);
+    background-size:cover;  
 }
 
 .navbar
@@ -38,4 +36,10 @@
 .card-title
 {
     color:orangered
+}
+
+.card-img-top
+{
+    border-radius: 5px;
+    
 }

@@ -24,7 +24,7 @@ export class App extends React.Component {
     return (
       <>
         <NavBar />
-        c'est pas normal{" "}
+        {" "}
       </>
     );
   }

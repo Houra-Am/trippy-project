@@ -54,7 +54,8 @@ class Home extends React.Component {
                     />
                   </Link>
                 </div>
-              );}
+              );
+              }
             })}
         </div>
         {this.state.cities.length === 0 && (
