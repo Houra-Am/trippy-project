@@ -13,6 +13,7 @@
     "react-leaflet": "^2.7.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
+    "star-based-rating": "^1.5.7",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
